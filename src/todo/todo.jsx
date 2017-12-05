@@ -71,7 +71,6 @@ export default class Todo extends Component{
           handleClear={this.handleClear}
         />
         <TodoList
-          list={this.state.list}
           handleMarkAsDone={this.handleMarkAsDone} // will apoint to the func that was created in this
           handleMarkAsPending={this.handleMarkAsPending} // class
           handleRemove={this.handleRemove}

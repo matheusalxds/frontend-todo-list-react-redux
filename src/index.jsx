@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './main/app';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import reducers from './main/reducers';
 
-const reducers = combineReducers({
-  field: () => ({ value: 'opa '})
-});
-
+const store = createStore(reducers);
 ReactDOM.render( 
-  <Provider store={createStore(reducers)} >
+  <Provider store={store} >
     <App />
   </Provider>, document.getElementById('app'));
